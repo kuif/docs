@@ -6,34 +6,38 @@
     <meta name="generator" content="VuePress 2.0.0-rc.13" />
     <style>
       :root {
-        --c-bg: #fff;
+        --vp-c-bg: #fff;
       }
 
-      html.dark {
-        --c-bg: #22272e;
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
       }
 
       html,
       body {
-        background-color: var(--c-bg);
+        background-color: var(--vp-c-bg);
       }
     </style>
     <script>
       const userMode = localStorage.getItem('vuepress-color-scheme')
       const systemDarkMode =
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
-        document.documentElement.classList.toggle('dark', true)
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.dataset.theme = 'dark'
       }
     </script>
     <link rel="icon" href="/favicon.ico"><title>Pay</title><meta name="description" content="以最简单的方式，整合微信、支付宝、百度、字节跳动支付。">
-    <link rel="preload" href="/pay/assets/style-DADYFlon.css" as="style"><link rel="stylesheet" href="/pay/assets/style-DADYFlon.css">
-    <link rel="modulepreload" href="/pay/assets/app-CRtx-25p.js"><link rel="modulepreload" href="/pay/assets/404.html-Cq9uLx8A.js">
-    <link rel="prefetch" href="/pay/assets/index.html-Cr3DzG3X.js" as="script"><link rel="prefetch" href="/pay/assets/close.html-8RmXJvmd.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-BMFUovhH.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-C6cqeUTZ.js" as="script"><link rel="prefetch" href="/pay/assets/query.html--9oUn_BW.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-Ccc_e3Oe.js" as="script"><link rel="prefetch" href="/pay/assets/settle.html-BeeXH9d7.js" as="script"><link rel="prefetch" href="/pay/assets/user.html-mECAK9U3.js" as="script"><link rel="prefetch" href="/pay/assets/cancel.html-BDaLHv8X.js" as="script"><link rel="prefetch" href="/pay/assets/find.html-DgYkII44.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-C8SmbB7Y.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-DZSW3y2K.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-SSmIVO1i.js" as="script"><link rel="prefetch" href="/pay/assets/response.html-CGhSlTAX.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-CtcgURH4.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-C2U-36uH.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-B5EoA4py.js" as="script"><link rel="prefetch" href="/pay/assets/response.html-DjCeDXIH.js" as="script"><link rel="prefetch" href="/pay/assets/settle.html-BRzpUcfq.js" as="script"><link rel="prefetch" href="/pay/assets/contain.html-VDV2hVQL.js" as="script"><link rel="prefetch" href="/pay/assets/donate.html-Ccpqr80g.js" as="script"><link rel="prefetch" href="/pay/assets/fast.html-DeMSZAgi.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-BDzMxGq_.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-DZPHbN0S.js" as="script"><link rel="prefetch" href="/pay/assets/query.html-DSguW3dX.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-PT3AUUdj.js" as="script"><link rel="prefetch" href="/pay/assets/close.html-B3bXpRCo.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-BVa-MIMP.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-C8INAfja.js" as="script"><link rel="prefetch" href="/pay/assets/profitsharing.html-WhD9Tw6n.js" as="script"><link rel="prefetch" href="/pay/assets/query.html-Cb6cgjhF.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-C9ut-njA.js" as="script">
+    <link rel="preload" href="/pay/assets/style-PoWje89h.css" as="style"><link rel="stylesheet" href="/pay/assets/style-PoWje89h.css">
+    <link rel="modulepreload" href="/pay/assets/app-DMvp8TmJ.js"><link rel="modulepreload" href="/pay/assets/404.html-BP803gWK.js">
+    <link rel="prefetch" href="/pay/assets/index.html-CAsjQA4n.js" as="script"><link rel="prefetch" href="/pay/assets/close.html-Cx79bq7V.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-BKRD0jEG.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-gVGGM_Ez.js" as="script"><link rel="prefetch" href="/pay/assets/query.html-DKkGd22W.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-DAvj7Qcm.js" as="script"><link rel="prefetch" href="/pay/assets/settle.html-CU9UOsx0.js" as="script"><link rel="prefetch" href="/pay/assets/user.html-BzrrZFvQ.js" as="script"><link rel="prefetch" href="/pay/assets/cancel.html-CkAdYOx8.js" as="script"><link rel="prefetch" href="/pay/assets/find.html-D-etjq7B.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-BqQ64yb3.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-DK3lH2di.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-DhwInnEa.js" as="script"><link rel="prefetch" href="/pay/assets/response.html-0cyYUBvh.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-R4Zj0ny3.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-CK1fUU0K.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-eJ8LjIYU.js" as="script"><link rel="prefetch" href="/pay/assets/response.html-C4ciWBN5.js" as="script"><link rel="prefetch" href="/pay/assets/settle.html-DAJmn7a8.js" as="script"><link rel="prefetch" href="/pay/assets/contain.html-CguIGNDd.js" as="script"><link rel="prefetch" href="/pay/assets/donate.html-C4qjnCMW.js" as="script"><link rel="prefetch" href="/pay/assets/fast.html-Qit_qhd9.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-DPq7HL6K.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-DKcJZLW_.js" as="script"><link rel="prefetch" href="/pay/assets/query.html-DYCGeB27.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-IJmCiIX8.js" as="script"><link rel="prefetch" href="/pay/assets/close.html-DVvIUho3.js" as="script"><link rel="prefetch" href="/pay/assets/notify.html-BhAtj9uE.js" as="script"><link rel="prefetch" href="/pay/assets/pay.html-CZ5WHrHV.js" as="script"><link rel="prefetch" href="/pay/assets/profitsharing.html-CUu5XVtY.js" as="script"><link rel="prefetch" href="/pay/assets/query.html-CfcBJ9th.js" as="script"><link rel="prefetch" href="/pay/assets/refund.html-DLTAAOEZ.js" as="script"><link rel="prefetch" href="/pay/assets/setupDevtools-H6KAGBNI-BG8adVP4.js" as="script">
   </head>
   <body>
-    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>There&#39;s nothing here.</blockquote><a class="route-link" href="/pay/">Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
-    <script type="module" src="/pay/assets/app-CRtx-25p.js" defer></script>
+    <div id="app"><!----></div>
+    <script type="module" src="/pay/assets/app-DMvp8TmJ.js" defer></script>
   </body>
 </html>
